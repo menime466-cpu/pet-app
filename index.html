@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Мой питомник</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- ВЕРХНЯЯ ПАНЕЛЬ -->
+    <div class="topbar">
+      <div class="level">Питомник • День <span id="day">1</span></div>
+      <div class="coins" id="coins">0 🟊</div>
+    </div>
+
+    <div class="screen">
+
+      <!-- ПИТОМЕЦ (ТОЛЬКО ОН В PET-AREA) -->
+      <div class="pet-area">
+        <div class="pet">
+          <img
+            src="assets/dog_open.png"
+            class="pet-img"
+            id="petImg"
+            alt="Питомец"
+          >
+        </div>
+      </div>
+
+      <!-- ПУЗЫРЬ СОСТОЯНИЯ -->
+      <div class="pet-bubble" id="bubble">
+        Бублик рад тебя видеть 🐶
+      </div>
+
+      <!-- ИМЯ ПИТОМЦА -->
+      <div class="tooltip" id="petName">
+        Бублик
+      </div>
+
+      <!-- СТАТЫ -->
+      <div class="stats">
+        <div>🍖 Сытость: <span id="hungerStat">70</span>%</div>
+        <div>🧼 Чистота: <span id="cleanStat">80</span>%</div>
+        <div>😊 Настроение: <span id="moodStat">90</span>%</div>
+      </div>
+
+      <!-- КНОПКИ ДЕЙСТВИЙ -->
+      <div class="actions">
+        <div class="btn" data-action="feed">🥣 Покормить</div>
+        <div class="btn" data-action="wash">🛁 Помыть</div>
+        <div class="btn" data-action="play">🎾 Поиграть</div>
+        <div class="btn" data-action="sleep">🌙 Отдохнуть</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TELEGRAM WEBAPP -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

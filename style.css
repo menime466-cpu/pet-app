@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6efe3;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  padding: 12px;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.level {
+  font-weight: bold;
+}
+
+.coins {
+  background: #ffdca0;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* ===== MAIN SCREEN ===== */
+.screen {
+  background: #fff3e6;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== PET AREA ===== */
+.pet-area {
+  height: 260px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pet {
+  background: radial-gradient(circle, #ffffff 40%, transparent 70%);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.pet-img {
+  width: 220px;
+  animation: breathe 4s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes breathe {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+/* ===== PET BUBBLE ===== */
+.pet-bubble {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+/* ===== PET NAME ===== */
+.tooltip {
+  position: absolute;
+  bottom: 8px;
+  background: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== STATS ===== */
+.stats {
+  margin-top: 10px;
+  background: white;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn {
+  background: white;
+  padding: 12px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s ease, background 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn:hover {
+  background: #fff8ee;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
